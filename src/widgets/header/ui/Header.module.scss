@@ -1,0 +1,38 @@
+.header {
+  background: var(--color-background);
+}
+
+.container {
+  max-width: 1280px;
+  height: 80px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  gap: 32px;
+}
+
+.link {
+  font-size: var(--header-font-size);
+  color: var(--color-text);
+
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.login {
+  background: var(--color-primary);
+  color: var(--color-white);
+
+  &:hover {
+    background: var(--color-primary-hover);
+  }
+}

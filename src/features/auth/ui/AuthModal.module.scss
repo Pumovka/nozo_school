@@ -1,0 +1,56 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.3);
+
+  z-index: 100;
+}
+
+.modal {
+  position: relative;
+
+  width: 400px;
+
+  padding: 32px;
+
+  background: var(--color-primary);
+
+  border-radius: 16px;
+
+  color: var(--color-white);
+}
+
+.title {
+  margin-bottom: 24px;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+
+  top: 12px;
+  right: 16px;
+
+  background: transparent;
+  border: none;
+
+  color: var(--color-white);
+
+  font-size: 24px;
+
+  cursor: pointer;
+}
+
+.trigger {
+  background: var(--color-primary);
+  color: var(--color-white);
+}

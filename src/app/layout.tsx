@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { Header } from "@/widgets/header/ui/Header";
+import "./globals.scss";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+import { Header } from "@/widgets/header/ui/Header";
 
 export const metadata: Metadata = {
   title: "NOZO School",
@@ -19,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`h-full antialiased`}>
       <body>
         <Header />
         <main>{children}</main>

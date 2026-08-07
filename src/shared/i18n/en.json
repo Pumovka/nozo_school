@@ -1,0 +1,17 @@
+{
+  "navigation": {
+    "about": "About school",
+    "courses": "Courses",
+    "parents": "For parents",
+    "gallery": "Gallery",
+    "contacts": "Contacts",
+    "login": "Login"
+  },
+
+  "auth": {
+    "loginTitle": "Sign in",
+    "registerTitle": "Create account",
+    "email": "Email",
+    "password": "Password"
+  }
+}
