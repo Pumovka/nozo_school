@@ -1,0 +1,17 @@
+{
+  "navigation": {
+    "about": "О школе",
+    "courses": "Курсы",
+    "parents": "Родителям",
+    "gallery": "Галерея",
+    "contacts": "Контакты",
+    "login": "Войти"
+  },
+
+  "auth": {
+    "loginTitle": "Вход",
+    "registerTitle": "Регистрация",
+    "email": "Email",
+    "password": "Пароль"
+  }
+}

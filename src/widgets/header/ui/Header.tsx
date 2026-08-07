@@ -1,9 +1,35 @@
-export const Header = () => {
+import Image from "next/image";
+import Link from "next/link";
+
+import { navigation } from "@/shared/config/navigation";
+
+import styles from "./Header.module.scss";
+import { AuthModal } from "@/features/auth/ui/AuthModal";
+
+export function Header() {
   return (
-    <header className="border-b">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <h1 className="text-lg font-semibold">NOZO School</h1>
+    <header className={styles.header}>
+      <div className={styles.container}>
+        <Link href="/">
+          <Image
+            src="/logo_eng.png"
+            alt="NOZO School"
+            width={250}
+            height={52}
+            priority
+          />
+        </Link>
+
+        <nav className={styles.navigation}>
+          {navigation.map((item) => (
+            <Link key={item.href} href={item.href} className={styles.link}>
+              {item.key}
+            </Link>
+          ))}
+        </nav>
+
+        <AuthModal />
       </div>
     </header>
   );
-};
+}

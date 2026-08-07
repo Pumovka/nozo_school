@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import "../shared/styles/index.scss";
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
+}
