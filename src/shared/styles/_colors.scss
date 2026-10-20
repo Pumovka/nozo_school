@@ -1,24 +1,59 @@
 :root {
-  /* Brand */
+  /* Brand colors */
   --color-primary: #544ee9;
   --color-primary-hover: #433dcc;
+  --color-primary-light: #f0f4ff;
+  --color-secondary: #ff6b4a;
+  --color-secondary-hover: #e85938;
+  --color-secondary-light: #fff4ee;
 
-  /* Surface */
-  --color-background: #fcfcfc;
-  --color-surface: #f5f5f5;
+  /* Surfaces & Backgrounds */
+  --color-background: #f8f9fd;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #fbfbfd;
+  --color-border: #e6e9f0;
+  --color-border-subtle: #f0f2f7;
 
-  /* Text */
-  --color-text: #333333;
-  --color-text-inverse: #f5f5f5;
+  /* Card category tints and strokes (60% opacity per design requirement) */
+  --color-card-stroke-blue: rgba(224, 231, 255, 0.6);
+  --color-tint-blue-bg: #eef2ff;
+  --color-tint-blue-border: rgba(224, 231, 255, 0.6);
+  --color-tint-blue-icon: #4f46e5;
 
-  /* Border */
-  --color-border: #d9d9d9;
+  --color-tint-orange-bg: #fff7ed;
+  --color-tint-orange-border: rgba(255, 237, 213, 0.6);
+  --color-tint-orange-icon: #ea580c;
+
+  --color-tint-amber-bg: #fefce8;
+  --color-tint-amber-border: rgba(254, 240, 138, 0.6);
+  --color-tint-amber-icon: #d97706;
+
+  --color-tint-purple-bg: #f5f3ff;
+  --color-tint-purple-border: rgba(221, 214, 254, 0.6);
+  --color-tint-purple-icon: #7c3aed;
+
+  /* Text colors */
+  --color-text: #171923;
+  --color-text-muted: #5a6275;
+  --color-text-subtle: #8a92a6;
+  --color-text-inverse: #ffffff;
+
+  /* Status & Accessibility */
+  --color-success: #10b981;
+  --color-success-bg: #ecfdf5;
+  --color-success-border: #a7f3d0;
+  --color-success-text: #047857;
 
   /* Radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
 
   /* Shadow */
-  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 2px 8px rgba(23, 25, 35, 0.04);
+  --shadow-md: 0 8px 24px rgba(23, 25, 35, 0.06);
+  --shadow-lg: 0 16px 40px rgba(23, 25, 35, 0.08);
 }

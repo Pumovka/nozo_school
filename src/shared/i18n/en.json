@@ -1,16 +1,182 @@
 {
-  "navigation": {
-    "about": "About school",
-    "courses": "Courses",
-    "parents": "For parents",
-    "gallery": "Gallery",
-    "contacts": "Contacts",
-    "login": "Login"
+  "header": {
+    "logoTitle1": "NOZO",
+    "logoTitle2": "SCHOOL",
+    "logoSubtitle": "EDUCATION WITHOUT BARRIERS",
+    "nav": {
+      "about": "About platform",
+      "courses": "Courses catalog",
+      "partnership": "Partnership",
+      "accessibility": "Accessibility",
+      "contacts": "Contacts"
+    },
+    "login": "Sign in",
+    "ariaMainNavigation": "Main navigation",
+    "ariaMobileNavigation": "Mobile navigation",
+    "ariaNavMenu": "Navigation menu",
+    "ariaClose": "Close",
+    "ariaLogo": "NOZO School Logo"
   },
-
+  "hero": {
+    "titleLine1": "Education",
+    "titleHighlight1": "without",
+    "titleHighlight2": "barriers",
+    "description": "Learn new things, master useful skills, and prepare for your future profession. Choose courses with texts, subtitles, and other accessible formats.",
+    "findCourse": "Find course",
+    "partnership": "Partnership",
+    "accessibilityTitle": "Accessibility settings",
+    "wcagBadge": "WCAG 2.1 AA",
+    "fontSizeLabel": "Font size",
+    "colorSchemeLabel": "Color scheme",
+    "schemeLight": "Light",
+    "schemeContrast": "Contrast",
+    "schemeDark": "Dark",
+    "schemeSepia": "Sepia",
+    "screenReaderLabel": "Screen reader",
+    "speedLabel": "Speed:",
+    "noAnimationLabel": "Reduce motion",
+    "noAnimationDesc": "Reduces visual strain",
+    "ariaMainBanner": "Main hero banner",
+    "ariaAccessPanel": "Accessibility settings panel",
+    "fontSizeOptions": ["100%", "125%", "150%", "200%"],
+    "speedOptions": ["0.8x", "1.0x", "1.2x"]
+  },
+  "lessonPreview": {
+    "lessonTitle": "Lesson 1: Introduction to digital design",
+    "quote": "«We use simple shapes and clear words to make learning effortless.»",
+    "subtitlesLabel": "Subtitles (RU)",
+    "transcriptLabel": "Text transcript",
+    "fragmentTitle": "FRAGMENT TRANSCRIPTION",
+    "fragmentText": "In this lesson, we will explore the first steps: understanding layout structure, adjusting playback speed, and downloading lesson notes.",
+    "videoAlt": "Video lesson preview with subtitles"
+  },
+  "goals": {
+    "title": "Learning tailored to your goals",
+    "subtitle": "Flexible formats and clear learning paths for any educational and professional goals.",
+    "ariaSection": "Learning tailored to your goals",
+    "career": {
+      "title": "Career",
+      "description": "Preparation for your first job, internships, and confident career start in accredited companies.",
+      "action": "Employment and growth"
+    },
+    "professionChange": {
+      "title": "Career change",
+      "description": "Smooth transition to tech from scratch: step-by-step program, mentorship, and portfolio.",
+      "action": "New specialty"
+    },
+    "practice": {
+      "title": "Practice",
+      "description": "Master applied digital tools, office suites, and communications for everyday workflows.",
+      "action": "Applied tools"
+    },
+    "creativity": {
+      "title": "Creativity and hobby",
+      "description": "Create illustrations, accessible media, animations, and pottery for hard of hearing and low vision.",
+      "action": "Creative projects"
+    }
+  },
+  "formats": {
+    "title": "Learn in a comfortable format",
+    "subtitle": "Read texts, watch videos with subtitles, utilize transcripts, and master knowledge with assistive tech support.",
+    "standardsButton": "Accessibility standards",
+    "ariaSection": "Accessibility formats",
+    "hearing": {
+      "title": "For people with hearing impairments",
+      "description": "Accurate synchronized subtitles for all video lectures, visual transcripts, and lesson summaries."
+    },
+    "vision": {
+      "title": "For people with visual impairments",
+      "description": "Full screen-reader compatibility (NVDA, VoiceOver), clear semantic structure, and keyboard navigation."
+    },
+    "comfort": {
+      "title": "Universal comfort",
+      "description": "Quick theme switching, font scaling, reduced motion, and clear visual layout."
+    }
+  },
+  "courses": {
+    "title": "What you can learn",
+    "subtitle": "Programs designed by experts in collaboration with inclusive pedagogy specialists.",
+    "action": "Browse courses",
+    "ariaSection": "Courses catalog",
+    "languages": {
+      "badge": "12 courses",
+      "title": "Languages",
+      "description": "Practical English, Russian Sign Language, and communication skills for everyday life."
+    },
+    "digital": {
+      "badge": "18 courses",
+      "title": "Digital skills",
+      "description": "Computer literacy, office suites, online services, and modern AI tools."
+    },
+    "general": {
+      "badge": "15 courses",
+      "title": "General topics",
+      "description": "Financial literacy, logic, legal basics, and critical thinking."
+    },
+    "professions": {
+      "badge": "24 courses",
+      "title": "Profession fundamentals",
+      "description": "Software testing, content management, customer support, and basic data analysis."
+    }
+  },
+  "benefits": {
+    "title": "Extra education without stress or hurry",
+    "description": "We help pick engaging courses tailored to the child's interests, without overload or rigid bounds. Comfortable learning at a natural pace.",
+    "action": "Choose course for child",
+    "ariaSection": "Extra education",
+    "item1": {
+      "step": "01",
+      "title": "Find topics that captivate your child",
+      "description": "Interactive storylines, visual hints, and engaging gamified examples fostering curiosity for tech and languages."
+    },
+    "item2": {
+      "step": "02",
+      "title": "Preview complexity and format beforehand",
+      "description": "Transparent course cards: audio presence, pace, subtitles, and lesson scope are visible before starting."
+    },
+    "item3": {
+      "step": "03",
+      "title": "Learn at a calm pace without rushing",
+      "description": "No penalties or harsh timers — children can replay fragments and return to materials at any time."
+    }
+  },
+  "collaboration": {
+    "title": "Create accessible education together with us",
+    "subtitle": "We welcome educators, course creators, schools, and employers to develop inclusive education and prepare demanded specialists.",
+    "action": "More about partnership",
+    "ariaSection": "Collaboration",
+    "card1": {
+      "badge": "FOR AUTHORS & SCHOOLS",
+      "title": "Publish your educational programs and courses on an inclusive platform",
+      "tag": "Methodological support"
+    },
+    "card2": {
+      "badge": "WIDE REACH",
+      "title": "Share practical knowledge with an engaged audience across the nation",
+      "tag": "Inclusive formats"
+    },
+    "card3": {
+      "badge": "CORPORATE HIRING",
+      "title": "Train and hire future talents tailored to your company's exact tasks",
+      "tag": "Internship programs"
+    }
+  },
+  "cta": {
+    "title": "Start with what interests you.",
+    "subtitle": "Choose a course and take the first step towards new knowledge.",
+    "action": "Browse courses",
+    "ariaSection": "Call to action"
+  },
+  "footer": {
+    "tagline": "Barrier-free education",
+    "copyright": "© 2025 NOZO School. All rights reserved.",
+    "wcagCompliant": "WCAG 2.1 AA Compliant",
+    "ariaFooter": "Website footer",
+    "ariaFooterLinks": "Footer links"
+  },
   "auth": {
     "loginTitle": "Sign in",
-    "registerTitle": "Create account",
+    "registerTitle": "Registration",
     "email": "Email",
     "password": "Password"
   }

@@ -1,0 +1,150 @@
+@use "@/shared/styles/mixins" as *;
+
+.section {
+  padding: clamp(32px, 5vw, 60px) 0;
+  background-color: var(--color-background);
+}
+
+.container {
+  @include container-fluid;
+}
+
+.wrapper {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: clamp(36px, 5vw, 56px);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(36px, 5vw, 64px);
+
+  @include tablet {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.leftCol {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.description {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.actionButton {
+  @include flex-center;
+  gap: 10px;
+  height: 52px;
+  padding: 0 28px;
+  background-color: var(--color-secondary);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.2s;
+  box-shadow: 0 8px 20px rgba(255, 107, 74, 0.25);
+
+  &:hover {
+    background-color: var(--color-secondary-hover);
+    box-shadow: 0 10px 24px rgba(255, 107, 74, 0.35);
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.rightCol {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+.stepBadge {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  @include flex-center;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.itemTitle {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.itemDesc {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Badge colors */
+.blueBadge {
+  background-color: var(--color-tint-blue-bg);
+  color: var(--color-tint-blue-icon);
+  border: 1px solid var(--color-tint-blue-border);
+}
+
+.orangeBadge {
+  background-color: var(--color-tint-orange-bg);
+  color: var(--color-tint-orange-icon);
+  border: 1px solid var(--color-tint-orange-border);
+}
+
+.amberBadge {
+  background-color: var(--color-tint-amber-bg);
+  color: var(--color-tint-amber-icon);
+  border: 1px solid var(--color-tint-amber-border);
+}

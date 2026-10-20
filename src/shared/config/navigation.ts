@@ -1,22 +1,22 @@
 export const navigation = [
   {
-    key: "about",
-    href: "/about",
+    key: "header.nav.about",
+    href: "#about",
+    isActive: true,
   },
   {
-    key: "courses",
-    href: "/courses",
+    key: "header.nav.courses",
+    href: "#courses",
+    isActive: false,
   },
   {
-    key: "parents",
-    href: "/parents",
+    key: "header.nav.partnership",
+    href: "#partnership",
+    isActive: false,
   },
   {
-    key: "gallery",
-    href: "/gallery",
-  },
-  {
-    key: "contacts",
-    href: "/contacts",
+    key: "header.nav.accessibility",
+    href: "#accessibility",
+    isActive: false,
   },
 ] as const;

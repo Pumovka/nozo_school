@@ -1,38 +1,147 @@
+@use "@/shared/styles/mixins" as *;
+
 .header {
-  background: var(--color-background);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border-subtle);
+  transition: all 0.2s ease;
 }
 
 .container {
-  max-width: 1280px;
+  @include container-fluid;
+  @include flex-between;
   height: 80px;
-  margin: 0 auto;
+  gap: 24px;
+}
 
+.logoWrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
 }
 
 .navigation {
   display: flex;
-  gap: 32px;
+  align-items: center;
+  gap: clamp(16px, 2.5vw, 36px);
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .link {
-  font-size: var(--header-font-size);
-  color: var(--color-text);
-
-  transition: color 0.2s;
+  position: relative;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  transition:
+    color 0.2s,
+    background-color 0.2s;
 
   &:hover {
     color: var(--color-primary);
   }
+
+  &.active {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 12px;
+      right: 12px;
+      height: 3px;
+      border-radius: var(--radius-full);
+      background-color: var(--color-primary);
+    }
+  }
 }
 
-.login {
-  background: var(--color-primary);
-  color: var(--color-white);
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.loginButton {
+  @include flex-center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 20px;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
 
   &:hover {
-    background: var(--color-primary-hover);
+    background-color: var(--color-primary-hover);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: 1px solid var(--color-border);
+  padding: 8px;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  color: var(--color-text);
+
+  @include mobile {
+    @include flex-center;
+  }
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  padding: 16px clamp(16px, 4vw, 32px) 24px;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  gap: 12px;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.mobileLink {
+  padding: 10px 14px;
+  border-radius: var(--radius-xs);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  text-decoration: none;
+
+  &:hover,
+  &.active {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
   }
 }

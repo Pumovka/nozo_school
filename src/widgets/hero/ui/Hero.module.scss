@@ -1,0 +1,414 @@
+@use "@/shared/styles/mixins" as *;
+
+.hero {
+  position: relative;
+  padding: clamp(32px, 5vw, 64px) 0 clamp(48px, 6vw, 80px);
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(84, 78, 233, 0.04) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(255, 107, 74, 0.04) 0%,
+      transparent 40%
+    );
+  overflow: hidden;
+}
+
+.container {
+  @include container-fluid;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: clamp(32px, 4vw, 56px);
+
+  @include tablet {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.leftCol {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vw, 28px);
+}
+
+.rightCol {
+  flex: 1 1 45%;
+  max-width: 520px;
+
+  @include tablet {
+    max-width: 100%;
+  }
+}
+
+.title {
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.highlightBlue {
+  color: var(--color-primary);
+}
+
+.highlightOrange {
+  color: var(--color-secondary);
+}
+
+.description {
+  font-size: clamp(16px, 1.8vw, 18px);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
+  max-width: 540px;
+  margin: 0;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.primaryButton {
+  @include flex-center;
+  gap: 10px;
+  height: 52px;
+  padding: 0 28px;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.1s,
+    box-shadow 0.2s;
+  box-shadow: 0 8px 20px rgba(84, 78, 233, 0.25);
+
+  &:hover {
+    background-color: var(--color-primary-hover);
+    box-shadow: 0 10px 24px rgba(84, 78, 233, 0.35);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.secondaryButton {
+  @include flex-center;
+  gap: 10px;
+  height: 52px;
+  padding: 0 24px;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  border: 1px solid var(--color-tint-blue-border);
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: #e0e7ff;
+  }
+}
+
+/* Accessibility settings panel */
+.accessPanel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: var(--shadow-sm);
+  margin-top: 8px;
+}
+
+.panelHeader {
+  @include flex-between;
+}
+
+.panelTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.panelIcon {
+  color: var(--color-primary);
+}
+
+.wcagBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
+  border: 1px solid var(--color-success-border);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.controlsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.controlRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.controlItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 1 240px;
+}
+
+.controlLabel {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  display: flex;
+  justify-content: space-between;
+}
+
+.activeValue {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.toggleButtonGroup {
+  display: flex;
+  width: 100%;
+  background-color: var(--color-tint-blue-bg);
+  padding: 3px;
+  border-radius: var(--radius-xs);
+  gap: 3px;
+  box-sizing: border-box;
+}
+
+.toggleBtn {
+  flex: 1 1 0;
+  border: none;
+  background: none;
+  padding: 6px 4px;
+  border-radius: 4px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.15s;
+
+  &.active {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    font-weight: var(--font-weight-semibold);
+    box-shadow: 0 2px 4px rgba(84, 78, 233, 0.2);
+  }
+
+  &:hover:not(.active) {
+    color: var(--color-text);
+  }
+}
+
+.switchRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.switchInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.switchTitle {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.switchDesc {
+  font-size: 11px;
+  color: var(--color-text-subtle);
+  line-height: var(--line-height-normal);
+}
+
+.speedControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.speedLabel {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.toggleSwitch {
+  width: 42px;
+  height: 24px;
+  background-color: #cbd5e1;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  padding: 2px;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+
+  &.switchOn {
+    background-color: var(--color-primary);
+  }
+
+  .switchKnob {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  &.switchOn .switchKnob {
+    transform: translateX(18px);
+  }
+}
+
+/* Right Column: Lesson Preview Card */
+.lessonCard {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  padding: 20px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lessonHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.videoWrapper {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.videoImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.togglesRow {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: var(--color-tint-blue-bg);
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-tint-blue-border);
+}
+
+.toggleOption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggleLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.blueDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.orangeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+}
+
+.transcriptBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.transcriptHeader {
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.transcriptContent {
+  background-color: var(--color-tint-amber-bg);
+  border: 1px solid var(--color-tint-amber-border);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-normal);
+  color: var(--color-text);
+}

@@ -1,0 +1,110 @@
+@use "@/shared/styles/mixins" as *;
+
+.footer {
+  width: 100%;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: clamp(36px, 5vw, 56px) 0 32px;
+}
+
+.container {
+  @include container-fluid;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.topRow {
+  @include flex-between;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--color-border);
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.tagline {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.5vw, 32px);
+  flex-wrap: wrap;
+}
+
+.navLink {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.separatorLine {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border-subtle);
+}
+
+.bottomRow {
+  @include flex-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.copyright {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-subtle);
+}
+
+.wcagBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-success-bg);
+  border: 1px solid var(--color-success-border);
+  color: var(--color-success-text);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.greenDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-success);
+}

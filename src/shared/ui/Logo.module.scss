@@ -1,0 +1,54 @@
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  user-select: none;
+}
+
+.owlWrapper {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.owlImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.textGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+  gap: 3px;
+}
+
+.mainTitle {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: baseline;
+}
+
+.titleDark {
+  color: #171923;
+}
+
+.titleBlue {
+  color: var(--color-primary);
+}
+
+.subtitle {
+  font-size: 8.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+}
